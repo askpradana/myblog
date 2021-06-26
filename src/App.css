@@ -1,38 +1,292 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  user-select: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* =============== */
+/* utility */
+/* =============== */
+
+.flex-sb {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Hidden-no-jutsu {
+  display: none;
+}
+
+/* =============== */
+/* Header start */
+
+.Header {
+  /* background-color: red; */
+  max-width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 1.5em 0;
+  margin: auto;
+}
+
+.Header-blog-name p {
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.Header p {
+  cursor: pointer;
+}
+
+.Header-menu li {
+  list-style: none;
+}
+
+.Header-menu-list a {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  padding: 0 1em;
+}
+
+.Header-menu-list a:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* Header end */
+/* =================== */
+/* mainpage start */
+
+.Mainpage {
+  background-color: #ffa69e;
+  width: 100vw;
+  height: 100vh;
+}
+
+@media only screen and (max-height: 720px) {
+  .Mainpage {
+    height: 720px;
+  }
+}
+
+.Mainpage-wrapper {
+  position: relative;
+  top: 20%;
+  min-width: 900px;
+  margin: 0 5vw;
+}
+
+.Mainpage-left {
+  width: 50%;
+  /* TODO: Ubah biar buttonnya ngga berubah2, heightnya tetap gitu */
+}
+
+.Mainpage-left h1 {
+  color: #5e6472;
+  font-size: 5rem;
+  line-height: 1;
+  font-family: 'Bebas Neue';
+  font-weight: 400;
+}
+
+.Mainpage-left h3 {
+  color: #5e6472;
+  font-family: 'Archivo', sans-serif;
+  padding-bottom: 15px;
+}
+
+.Mainpage-left button {
+  cursor: pointer;
+  width: 190px;
+  height: 50px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #5e6472;
+  background: transparent;
+  border: 2px solid #5e6472;
+}
+
+.Mainpage-left button:hover {
+  color: #ffa69e;
+  background-color: #5e6472;
+}
+
+.Mainpage-right {
+  display: flex;
+  width: 50%;
+}
+
+.Mainpage-right img {
+  height: 400px;
+  width: 600px;
+}
+
+/* Mainpage end */
+/* =============== */
+/* Howtoreachme start */
+
+.HowToReachMe {
+  /* background-color: yellow; */
+  padding: 3rem;
+  line-height: 2;
+}
+
+.HowToReachMe p {
+  color: #5e6472;
+  font-size: 1.5rem;
+}
+
+.HowToReachMe i {
+  font-size: 2rem;
+}
+
+.HowToReachMe a {
+  color: #5e6472;
+}
+
+/* howtoreachme end */
+/* =================== */
+/* Whychooseme start */
+
+.WhyChooseMe-body {
+  height: 70vh;
+}
+
+.WhyChooseMe-wrapper {
+  width: 100%;
+  height: 100%;
+  display: block;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.WhyChooseMe-header {
+  padding: 2%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.WhyChooseMe-main {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-evenly;
+  padding-top: 1%;
+}
+
+.Pembesar-icon {
+  font-size: 4rem;
+  text-shadow: 2px 4px 6px black;
+  padding: 5%;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.WhyChooseMe-one,
+.WhyChooseMe-two,
+.WhyChooseMe-three {
+  user-select: none;
+  cursor: pointer;
+  transition: 0.5s;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  background-color: #ffa69e;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.WhyChooseMe-one:hover,
+.WhyChooseMe-two:hover,
+.WhyChooseMe-three:hover {
+  background-color: rgba(255, 166, 158, 0.8);
 }
+
+.WhyChooseMe-content {
+  padding-top: 5%;
+}
+
+/* WhyChooseMe End */
+/* =================== */
+/* profile start */
+
+.Profile {
+  width: 100vw;
+  height: 100vh;
+  background-color: #bcecf6;
+}
+
+.Profile-wrapper {
+  display: flex;
+  position: relative;
+  top: 30%;
+  margin: 0 10%;
+}
+
+.Data {
+  position: relative;
+  margin: 0 0 0 20%;
+  padding: 2em 0;
+}
+
+.Data p {
+  padding: 1em 0;
+}
+
+.Data-business p {
+  font-family: 'Farro', sans-serif;
+  font-weight: 700;
+}
+
+.Gambar img {
+  width: 200px;
+}
+
+/* profile end */
+/* =================== */
+/* footer start */
+
+.Footer {
+  width: 100vw;
+  height: 30vh;
+  background-color: #5e6472;
+}
+
+.Footer-wrapper {
+  display: flex;
+  height: 100%;
+}
+
+.Footer-left {
+  width: 20%;
+}
+
+.Footer-main {
+  width: 60%;
+  /* background-color: gold; */
+  font-size: 2em;
+}
+
+.Footer-main-icon {
+  width: 100%;
+  position: relative;
+  top: 40%;
+  display: flex;
+  justify-content: space-evenly;
+  /* background-color: red; */
+}
+
+.Footer-main-icon i {
+  cursor: pointer;
+  color: white;
+}
+
+.Footer-right {
+  width: 20%;
+}
+
+/* footer end */
+/* =============== */
